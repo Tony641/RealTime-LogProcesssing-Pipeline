@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pyspark
+psycopg2
+kafka-python
+pandas
+scikit-learn
+numpy

@@ -1,12 +1,11 @@
-  
-```md
+
 # 🚀 Scalable Recommendation System with Search-Based Personalization
 
 ## 📌 Overview
 This project is a **real-time recommendation system** that combines **search events** and **user interactions (clicks, views, purchases)** to generate **personalized product recommendations** using **Apache Spark, PostgreSQL, FastAPI, and Airflow**.
 
 ## 📂 Folder Structure
-```
+
 recommendation_pipeline/
 │── orchestration/
 │   ├── dags/
@@ -22,7 +21,6 @@ recommendation_pipeline/
 │   ├── init_db.sql                      # PostgreSQL table creation
 │── README.md
 │── requirements.txt
-```
 
 ## 📌 Features
 ✅ **Aggregates search queries & maps them to product IDs**  
@@ -35,25 +33,25 @@ recommendation_pipeline/
 ## 🚀 How to Run
 
 ### **1️⃣ Start the Entire System**
-```bash
+
 docker-compose -f recommendation_pipeline/deployment/docker-compose.yml up -d
-```
+
 
 ### **2️⃣ Open Airflow UI**
 [http://localhost:8080](http://localhost:8080)  
 
 ### **3️⃣ Manually Trigger DAG (Optional)**
-```bash
+ 
 airflow dags trigger full_recommendation_pipeline
-```
+ 
 
 ### **4️⃣ Test the API**
-```bash
+ 
 curl http://localhost:8000/recommend/123e4567-e89b-12d3-a456-426614174000
-```
+ 
 
 ## 📌 Example API Response
-```json
+ 
 {
     "user_features": {
         "clicks": 10,
@@ -66,7 +64,7 @@ curl http://localhost:8000/recommend/123e4567-e89b-12d3-a456-426614174000
         {"product_id": "product_987", "product_name": "Gaming Laptop Stand"}
     ]
 }
-```
+ 
 
 ## 📌 Technologies Used
 - **Apache Spark** for batch processing & feature engineering  
@@ -93,7 +91,7 @@ Feel free to **fork**, **open issues**, or **submit pull requests** to improve t
 
 ## 📜 License
 This project is open-source under the **MIT License**.
-```
+ 
 
 ---
 
